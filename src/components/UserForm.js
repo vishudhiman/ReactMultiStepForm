@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FormUserDetails from "./FormUserDetails";
 import FormPersonalDetails from "./FormPersonalDetails";
-// import Confirm from "./Confirm";
 import Success from "./Success";
 
 export class UserForm extends Component {
@@ -76,19 +75,11 @@ export class UserForm extends Component {
             close={close}
           />
         );
-
       case 3:
         return <Success close={close} />;
-      // case 4:
-      //   return (
-      //     <Confirm
-      //       nextStep={this.nextStep}
-      //       prevStep={this.prevStep}
-      //       values={values}
-      //     />
-      //   );
+      default:
+        return <h1>No project match</h1>;
     }
-    return <div></div>;
   }
 }
 

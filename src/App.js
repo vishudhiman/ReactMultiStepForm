@@ -1,7 +1,5 @@
 import React from "react";
-import Home from "./components/Home";
 import UserForm from "./components/UserForm";
-// import Modal from "react-modal";
 
 function App() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -14,29 +12,25 @@ function App() {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={openModal}
-        class="w-28 px-4 py-2 ml-60 tracking-wide text-white transition-colors duration-200 transform bg-blue-600 rounded hover:bg-blue-300 focus:outline-none focus:bg-gray-600 justify-center"
-      >
-        SignUp
-      </button>
+      <div className="flex flex-col items-center">
+        <button
+          className="bg-blue-600 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button"
+          onClick={openModal}
+        >
+          SignUp
+        </button>
+      </div>
       {modalIsOpen ? (
-        <div className="container mx-auto flex justify-content-center">
-          {/* <Home /> */}
-          <UserForm close={closeModal} />
-        </div>
-      ) : null}
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-gray-200">
+            <UserForm close={closeModal} />
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </>
-    // <div>
-    //   <button onClick={openModal}>Open Modal</button>
-    //   <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
-    //     <div className="container mx-auto">
-    //       {/* <Home /> */}
-    //       <UserForm />
-    //     </div>
-    //   </Modal>
-    // </div>
   );
 }
 
