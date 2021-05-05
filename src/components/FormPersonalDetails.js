@@ -13,21 +13,28 @@ export class FormPersonalDetails extends Component {
   render() {
     const { values, handleChange, close } = this.props;
     return (
-      <div class="flex max-w-lg mx-auto h-screen my-16 overflow-hidden bg-white border rounded-lg shadow-lg dark:bg-gray-800 md:max-w-4xl lg:max-w-4xl">
+      <div class="flex max-w-lg mx-auto h-screen my-6 overflow-hidden bg-white border rounded-lg shadow-lg dark:bg-gray-800 md:max-w-4xl lg:max-w-4xl">
         <div class="bg-cover lg:w-5/12 md:w-1/3 mt-8">
-          <img
-            src="https://ik.imagekit.io/sfatbd3jh/New_Folder/jump_KnOcuJLo3.svg"
-            alt="JumpStart"
-            class="w-6 px-4 md:w-auto"
-          />
-          <p class="mt-16 block text-xl text-center text-gray-600 dark:text-gray-200">
-            Welcome back!
-          </p>
+          <div>
+            <img
+              src="https://ik.imagekit.io/sfatbd3jh/New_Folder/jump_KnOcuJLo3.svg"
+              alt="JumpStart"
+              class="w-6 px-10 pt-2 md:w-auto"
+            />
+          </div>
+          <div class="h-96 flex flex-col justify-center px-10 pt-10">
+            <p class="mt-16 px-2 block text-xl font-bold font-sans text-center text-black">
+              Welcome back!
+            </p>
+            <p class="mt-4 px-2 block text-sm text-center font-sans text-gray-600 dark:text-gray-200">
+              SignUp To Continue
+            </p>
+          </div>
         </div>
 
         <div class="w-full px-6 py-8 md:px-8 lg:w-full">
           <div
-            className="-mt-6 float-right object-right-top hover:bg-gray-400 rounded-2xl hover:text-white cursor-pointer"
+            className="-mt-2 float-right object-right-top hover:bg-gray-400 rounded-2xl hover:text-white cursor-pointer"
             onClick={close}
           >
             <svg
@@ -136,10 +143,6 @@ export class FormPersonalDetails extends Component {
             >
               SignUp
             </button>
-          </div>
-
-          <div class="flex items-center justify-between mt-4">
-            <span class="w-full ml-28 border-b dark:border-gray-600 md:w-96"></span>
           </div>
         </div>
       </div>

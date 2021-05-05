@@ -8,19 +8,26 @@ export class FormUserDetails extends Component {
   render() {
     const { values, handleChange, close } = this.props;
     return (
-      <div class="flex lg:w-full h-screen  mx-auto my-8 overflow-hidden bg-white border rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
-        <div class="bg-cover lg:w-5/12 md:w-1/3 mt-8">
-          <img
-            src="https://ik.imagekit.io/sfatbd3jh/New_Folder/jump_KnOcuJLo3.svg"
-            alt="JumpStart"
-            class="w-6 px-4 md:w-auto"
-          />
-          <p class="mt-16 block text-xl text-center text-gray-600 dark:text-gray-200">
-            Welcome back!
-          </p>
+      <div class="flex lg:w-full h-screen  mx-auto my-8 overflow-hidden bg-white border rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl ">
+        <div class="bg-cover lg:w-5/12 md:w-1/3 mt-8 ">
+          <div>
+            <img
+              src="https://ik.imagekit.io/sfatbd3jh/New_Folder/jump_KnOcuJLo3.svg"
+              alt="JumpStart"
+              class="w-6 px-10 pt-2 md:w-auto"
+            />
+          </div>
+          <div class="h-96 flex flex-col justify-center px-10 pt-10">
+            <p class="mt-16 px-2 block text-xl font-bold font-sans text-center text-black">
+              Welcome back!
+            </p>
+            <p class="mt-4 px-2 block text-sm text-center font-sans text-gray-600 dark:text-gray-200">
+              SignUp To Continue
+            </p>
+          </div>
         </div>
 
-        <div class="w-full mt-10 px-6 py-8 md:px-8 lg:w-full">
+        <div class="w-8/12 mt-10 mx-4 py-8 md:px-8 lg:w-full sm:w-1/3">
           <div
             className="-mt-12 float-right object-right-top hover:bg-gray-400 rounded-2xl hover:text-white cursor-pointer"
             onClick={close}

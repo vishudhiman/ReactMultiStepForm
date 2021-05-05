@@ -22,7 +22,7 @@ function App() {
         SignUp
       </button>
       {modalIsOpen ? (
-        <div className="container mx-auto">
+        <div className="container mx-auto flex justify-content-center">
           {/* <Home /> */}
           <UserForm close={closeModal} />
         </div>
